@@ -21,3 +21,24 @@ a {
   fonst-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Noto Serif Bold';
+  src: url('/fonts/NotoSerif-Bold.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Italic';
+  src: url('/fonts/NotoSerif-Italic.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif BoldItalic';
+  src: url('/fonts/NotoSerif-BoldItalic.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
+}
