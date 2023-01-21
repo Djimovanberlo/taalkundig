@@ -1,0 +1,44 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('/fonts/NotoSerif-Regular.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Bold';
+  src: url('/fonts/NotoSerif-Bold.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Italic';
+  src: url('/fonts/NotoSerif-Italic.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif BoldItalic';
+  src: url('/fonts/NotoSerif-BoldItalic.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
+}
