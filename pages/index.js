@@ -1,7 +1,8 @@
 import { B, H1, H2, H3, H4, I, P } from '@/fragments/typography'
 import Main from '@/layout/main'
+import { getHomePageData } from '@/services/contentful/api'
 
-export default function Home() {
+const Home = () => {
   return (
     <Main>
       <B>
@@ -16,3 +17,16 @@ export default function Home() {
     </Main>
   )
 }
+
+export async function getStaticProps() {
+  const { data, error } = await getHomePageData()
+  return {
+    props: {
+      data,
+      error,
+    },
+    revalidate: 60,
+  }
+}
+
+export default Home
