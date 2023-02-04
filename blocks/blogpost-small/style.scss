@@ -1,0 +1,13 @@
+.blogpostSmall {
+  background-color: $white;
+  height: 60rem;
+
+  &__img {
+    height: 30rem;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
