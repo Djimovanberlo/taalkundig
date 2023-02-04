@@ -2,7 +2,7 @@ import Main from '@/layout/main'
 import { getAbousUsPageData } from '@/services/contentful/api'
 
 const OverOns = ({ data }) => {
-  return <Main>smth</Main>
+  return <Main></Main>
 }
 
 export async function getStaticProps() {
