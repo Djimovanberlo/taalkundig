@@ -5,15 +5,15 @@ import Container from '@/layout/container'
 
 export default function Header() {
   return (
-    <Container>
-      <Block className='header'>
+    <Block className='header'>
+      <Container>
         <LinkButton href='/'>
           <P>Home</P>
         </LinkButton>
         <LinkButton href='over-one'>
           <P>Over ons</P>
         </LinkButton>
-      </Block>
-    </Container>
+      </Container>
+    </Block>
   )
 }
