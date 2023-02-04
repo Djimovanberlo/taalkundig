@@ -11,6 +11,7 @@
   "dependencies": {
     "@next/font": "13.1.4",
     "contentful": "^9.3.0",
+    "dateformat": "^5.0.3",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.4",
     "graphql": "^16.6.0",

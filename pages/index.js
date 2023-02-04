@@ -4,22 +4,11 @@ import Main from '@/layout/main'
 import { getHomePageData } from '@/services/contentful/api'
 
 const Home = ({ data }) => {
-  console.log('DATA', data)
-
   return (
-    <Main>
-      {data.map(({ image, slug }, index) => (
-        <BlogPostSmall key={index} image={image} slug={slug} />
+    <Main className='homepage'>
+      {data.map(({ image, title, introduction, slug, sys }, index) => (
+        <BlogPostSmall key={index} image={image} title={title} introduction={introduction} slug={slug} publishedAt={sys.publishedAt} />
       ))}
-      <B>
-        <H1>H1</H1>
-      </B>
-      <I>
-        <H2>H2</H2>
-      </I>
-      <H3>H3</H3>
-      <H4>H4</H4>
-      <P>P</P>
     </Main>
   )
 }

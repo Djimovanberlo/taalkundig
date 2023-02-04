@@ -1,5 +1,12 @@
 .footer {
-  padding-top: $space-sm;
-  padding-bottom: $space-sm;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 3rem;
   background-color: $white;
+  border-top: 2px solid $gray;
+
+  & > .container {
+    width: 100%;
+  }
 }

@@ -15,6 +15,13 @@ a {
   box-sizing: border-box;
 }
 
+.homepage {
+  // 3rem + 1px for both header and footer
+  height: calc(100vh - 6rem + 4px);
+  max-height: calc(100vh - 6rem + 4px);
+  overflow-y: scroll;
+}
+
 @font-face {
   font-family: 'Noto Serif';
   src: url('/fonts/NotoSerif-Regular.woff') format('woff');

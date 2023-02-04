@@ -14,6 +14,9 @@ export const homePageQuery = gql`
         title
         introduction
         slug
+        sys {
+          publishedAt
+        }
       }
     }
   }

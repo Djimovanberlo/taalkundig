@@ -1,6 +1,8 @@
 .blogpostSmall {
-  background-color: $white;
-  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: $space-md;
+  margin-bottom: $space-md;
 
   &__img {
     height: 30rem;
@@ -8,6 +10,30 @@
     &:hover {
       cursor: pointer;
       opacity: 0.8;
+    }
+  }
+
+  &__title,
+  &__intro {
+    margin-bottom: $space-md;
+  }
+
+  &__intro {
+    height: 7.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & > .card {
+    flex: 1;
+
+    & > .button > .p {
+      display: inline-block;
+      text-decoration: underline;
     }
   }
 }
