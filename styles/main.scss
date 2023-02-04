@@ -6,10 +6,19 @@
 
 /* Layout style sheets */
 @import './../layout/block/style.scss';
-@import './../layout/section/style.scss';
+@import './../layout/main/style.scss';
 @import './../layout/template/style.scss';
+@import './../layout/header/style.scss';
+@import './../layout/footer/style.scss';
+@import './../layout/container/style.scss';
 
 /* Sections style sheets */
 /* Blocks style sheets */
-/* Fratments style sheets */
+@import './../blocks/blogpost-small/style.scss';
+
+/* Fragments style sheets */
 @import './../fragments/typography/style.scss';
+@import './../fragments/image/style.scss';
+@import './../fragments/card/style.scss';
+@import './../fragments/buttons/style.scss';
+@import './../fragments/post-footer/style.scss';

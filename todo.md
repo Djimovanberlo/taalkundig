@@ -1,0 +1,7 @@
+- Make basic layout
+- Setup CTF
+- Make components for blogposts
+  - Richtext
+- Make navigation
+- Meta info & SEO
+- Deploy things
