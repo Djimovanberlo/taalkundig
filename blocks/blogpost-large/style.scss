@@ -1,0 +1,30 @@
+.blogpostLarge {
+  display: flex;
+  flex-direction: column;
+  margin: $space-sm 0;
+
+  @include screen-md {
+    margin: $space-xl 0;
+  }
+
+  &__img {
+    height: 15rem;
+
+    @include screen-md {
+      height: 30rem;
+    }
+  }
+
+  &__title,
+  &__intro {
+    margin-bottom: $space-sm;
+
+    @include screen-md {
+      margin-bottom: $space-md;
+    }
+  }
+
+  & > .card {
+    flex: 1;
+  }
+}

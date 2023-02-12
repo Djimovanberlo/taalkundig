@@ -28,7 +28,7 @@ export function getRenderOptions(links) {
       [BLOCKS.PARAGRAPH]: (node, children) => <P className='p--mb'>{children}</P>,
       [BLOCKS.LIST_ITEM]: (node, children) => <Li>{children}</Li>,
       [INLINES.HYPERLINK]: (node, children) => (
-        <LinkButton className='richtextLink' href={node.data.uri ?? ''} external>
+        <LinkButton className='richtextLink' href={node.data.uri ?? ''} external='true'>
           {children}
         </LinkButton>
       ),

@@ -1,25 +1,25 @@
-import Card from '@/fragments/card'
+import BlogPostLarge from '@/blocks/blogpost-large'
 import Main from '@/layout/main'
 import { getBlogPostDetailData, getBlogPostSlugData } from '@/services/contentful/api'
-import RichTextRenderer from '@/services/richtext'
 
 const BlogPostDetail = ({ data }) => {
-  const { content } = data
+  if (!data) return <></>
+
+  const { image, title, introduction, content, sys } = data
 
   return (
     <Main>
-      <Card className='card--overOns'>
-        <RichTextRenderer richText={content} />
-      </Card>
+      <BlogPostLarge image={image} title={title} introduction={introduction} content={content} publishedAt={sys.publishedAt} />
     </Main>
   )
 }
 
 export const getStaticProps = async ({ params }) => {
   const { data, error } = await getBlogPostDetailData(params?.slug)
+
   return {
     props: {
-      data,
+      data: data?.items[0],
       error,
     },
     revalidate: 60,
