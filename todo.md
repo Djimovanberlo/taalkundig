@@ -1,6 +1,7 @@
 - Make components for blogposts
   - Footnotes
   - img + description (CTF)
+- Socials
 - Custom 404
 - tab icon + title
 - Meta info & SEO
