@@ -3,5 +3,6 @@
   - Footnotes
   - img + description (CTF)
 - Custom 404
+- tab icon + title
 - Meta info & SEO
 - Deploy things

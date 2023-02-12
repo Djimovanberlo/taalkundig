@@ -4,7 +4,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import ImageComponent from '@/fragments/image'
 import { H1, H2, H3, H4, Li, P } from '@/fragments/typography'
 import { LinkButton } from '@/fragments/buttons'
-import Block from '@/layout/block'
 
 export function getRenderOptions(links) {
   const assetBlockMap = new Map()
@@ -43,5 +42,5 @@ export function getRenderOptions(links) {
 
 export default function RichTextRenderer({ richText, className = '' }) {
   if (!richText || !richText.json) return <></>
-  return <Block className={className}>{documentToReactComponents(richText.json, getRenderOptions(richText.links))}</Block>
+  return <div className={className}>{documentToReactComponents(richText.json, getRenderOptions(richText.links))}</div>
 }

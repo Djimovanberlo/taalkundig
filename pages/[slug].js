@@ -1,8 +1,18 @@
+import Card from '@/fragments/card'
 import Main from '@/layout/main'
 import { getBlogPostDetailData, getBlogPostSlugData } from '@/services/contentful/api'
+import RichTextRenderer from '@/services/richtext'
 
 const BlogPostDetail = ({ data }) => {
-  return <Main>MAIN</Main>
+  const { content } = data
+
+  return (
+    <Main>
+      <Card className='card--overOns'>
+        <RichTextRenderer richText={content} />
+      </Card>
+    </Main>
+  )
 }
 
 export const getStaticProps = async ({ params }) => {
