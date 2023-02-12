@@ -1,5 +1,4 @@
 - Make components for blogposts
-  - Richtext
   - Footnotes
   - img + description (CTF)
 - Custom 404
