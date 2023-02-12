@@ -25,3 +25,7 @@ export const B = ({ className = '', children }) => {
 export const I = ({ className = '', children }) => {
   return <i className={`i ${className}`}>{children}</i>
 }
+
+export const Li = ({ className = '', children }) => {
+  return <li className={`li ${className}`}>{children}</li>
+}

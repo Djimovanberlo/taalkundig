@@ -47,4 +47,12 @@ p {
   @include screen-md {
     font-size: 18px;
   }
+
+  &--mb {
+    margin-bottom: $space-xs;
+  }
+}
+
+.li > .p {
+  margin-bottom: auto;
 }

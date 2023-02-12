@@ -1,7 +1,7 @@
-- Make basic layout
-- Setup CTF
 - Make components for blogposts
   - Richtext
-- Make navigation
+  - Footnotes
+  - img + description (CTF)
+- Custom 404
 - Meta info & SEO
 - Deploy things

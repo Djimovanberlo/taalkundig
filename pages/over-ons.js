@@ -1,8 +1,16 @@
+import Card from '@/fragments/card'
 import Main from '@/layout/main'
 import { getAbousUsPageData } from '@/services/contentful/api'
+import RichTextRenderer from '@/services/richtext'
 
 const OverOns = ({ data }) => {
-  return <Main>hello</Main>
+  return (
+    <Main>
+      <Card className='card--overOns'>
+        <RichTextRenderer richText={data.aboutUs} />
+      </Card>
+    </Main>
+  )
 }
 
 export async function getStaticProps() {

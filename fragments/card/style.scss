@@ -3,6 +3,15 @@
   padding: $space-sm;
 
   @include screen-md {
-    padding: $space-lg;
+    padding: $space-xl;
+  }
+
+  &--overOns,
+  &--blogDetail {
+    margin: $space-sm 0;
+
+    @include screen-md {
+      margin: $space-xl 0;
+    }
   }
 }

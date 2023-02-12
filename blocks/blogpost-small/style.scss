@@ -1,8 +1,11 @@
 .blogpostSmall {
   display: flex;
   flex-direction: column;
-  margin-top: $space-sm;
-  margin-bottom: $space-sm;
+  margin: $space-sm 0;
+
+  @include screen-md {
+    margin: $space-xl 0;
+  }
 
   &__img {
     height: 15rem;

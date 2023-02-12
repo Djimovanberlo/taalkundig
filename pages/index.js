@@ -5,7 +5,7 @@ import { getHomePageData } from '@/services/contentful/api'
 
 const Home = ({ data }) => {
   return (
-    <Main className='homepage'>
+    <Main>
       {data.map(({ image, title, introduction, slug, sys }, index) => (
         <BlogPostSmall key={index} image={image} title={title} introduction={introduction} slug={slug} publishedAt={sys.publishedAt} />
       ))}
