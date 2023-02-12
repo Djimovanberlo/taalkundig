@@ -1,25 +1,33 @@
 .blogpostSmall {
   display: flex;
   flex-direction: column;
-  margin-top: $space-md;
-  margin-bottom: $space-md;
+  margin-top: $space-sm;
+  margin-bottom: $space-sm;
 
   &__img {
-    height: 30rem;
+    height: 20rem;
 
     &:hover {
       cursor: pointer;
       opacity: 0.8;
     }
+
+    @include screen-md {
+      height: 30rem;
+    }
   }
 
   &__title,
   &__intro {
-    margin-bottom: $space-md;
+    margin-bottom: $space-sm;
+
+    @include screen-md {
+      margin-bottom: $space-md;
+    }
   }
 
   &__intro {
-    height: 7.5rem;
+    height: 4lh;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     line-clamp: 4;

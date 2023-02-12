@@ -9,27 +9,42 @@ p {
 }
 
 .h1 {
-  font-size: 35px;
-  // mobile 26px
+  font-size: 26px;
+
+  @include screen-md {
+    font-size: 35px;
+  }
 }
 
 .h2 {
-  font-size: 24px;
-  // mobile 21px
+  font-size: 21px;
+
+  @include screen-md {
+    font-size: 24px;
+  }
 }
 
 .h3 {
-  font-size: 17px;
-  // mobile 15px
+  font-size: 15px;
+
+  @include screen-md {
+    font-size: 17px;
+  }
 }
 
 .h4 {
-  font-size: 14px;
-  // mobile 12px
+  font-size: 12px;
+
+  @include screen-md {
+    font-size: 14px;
+  }
 }
 
 .p {
-  font-size: 19px;
+  font-size: 16px;
   line-height: 1.5;
-  // mobile 15px
+
+  @include screen-md {
+    font-size: 18px;
+  }
 }

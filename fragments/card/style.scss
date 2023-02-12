@@ -1,4 +1,8 @@
 .card {
   background-color: $white;
-  padding: $space-lg;
+  padding: $space-sm;
+
+  @include screen-md {
+    padding: $space-lg;
+  }
 }
