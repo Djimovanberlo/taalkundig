@@ -12,10 +12,34 @@ h2,
 h3,
 h4 {
   font-family: 'Source Sans', sans-serif;
+
+  & b {
+    font-family: 'Source Sans Bold', sans-serif;
+  }
+
+  & i {
+    font-family: 'Source Sans Italic', sans-serif;
+  }
+
+  & b i {
+    font-family: 'Source Sans BoldItalic', sans-serif;
+  }
 }
 
 p {
   font-family: 'Source Serif', serif;
+
+  & b {
+    font-family: 'Source Serif Bold', serif;
+  }
+
+  & i {
+    font-family: 'Source Serif Italic', serif;
+  }
+
+  & b i {
+    font-family: 'Source Serif BoldItalic', serif;
+  }
 }
 
 .h1 {
