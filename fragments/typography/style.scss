@@ -5,22 +5,57 @@ h4,
 p {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: 'NotoSerif-Regular', serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Source Sans', sans-serif;
+
+  & b {
+    font-family: 'Source Sans Bold', sans-serif;
+  }
+
+  & i {
+    font-family: 'Source Sans Italic', sans-serif;
+  }
+
+  & b i {
+    font-family: 'Source Sans BoldItalic', sans-serif;
+  }
+}
+
+p {
+  font-family: 'Source Serif', serif;
+
+  & b {
+    font-family: 'Source Serif Bold', serif;
+  }
+
+  & i {
+    font-family: 'Source Serif Italic', serif;
+  }
+
+  & b i {
+    font-family: 'Source Serif BoldItalic', serif;
+  }
 }
 
 .h1 {
-  font-size: 26px;
+  font-size: 24px;
 
   @include screen-md {
-    font-size: 35px;
+    font-size: 34px;
   }
 }
 
 .h2 {
-  font-size: 21px;
+  font-size: 16px;
+  margin-bottom: 7px;
 
   @include screen-md {
-    font-size: 24px;
+    font-size: 21px;
   }
 }
 
@@ -41,15 +76,20 @@ p {
 }
 
 .p {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 11px;
+  line-height: 16px;
 
   @include screen-md {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   &--mb {
-    margin-bottom: $space-xs;
+    margin-bottom: 1rem;
+
+    @include screen-md {
+      margin-bottom: $space-sm;
+    }
   }
 }
 
