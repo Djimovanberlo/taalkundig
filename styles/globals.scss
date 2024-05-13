@@ -42,29 +42,57 @@ a {
 }
 
 @font-face {
-  font-family: 'Noto Serif';
-  src: url('/fonts/NotoSerif-Regular.woff') format('woff');
+  font-family: 'Source Sans';
+  src: url('/fonts/SourceSans3-Regular.ttf') format('truetype');
   fonst-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Noto Serif Bold';
-  src: url('/fonts/NotoSerif-Bold.woff') format('woff');
+  font-family: 'Source Sans Bold';
+  src: url('/fonts/SourceSans3-Bold.ttf') format('truetype');
   fonst-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Noto Serif Italic';
-  src: url('/fonts/NotoSerif-Italic.woff') format('woff');
+  font-family: 'Source Sans Italic';
+  src: url('/fonts/SourceSans3-Italic.ttf') format('truetype');
   fonst-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Noto Serif BoldItalic';
-  src: url('/fonts/NotoSerif-BoldItalic.woff') format('woff');
+  font-family: 'Source Sans BoldItalic';
+  src: url('/fonts/SourceSans3-BoldItalic.ttf') format('truetype');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  src: url('/fonts/SourceSerif4-Regular.ttf') format('truetype');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif Bold';
+  src: url('/fonts/SourceSerif4-Bold.ttf') format('truetype');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif Italic';
+  src: url('/fonts/SourceSerif4-Italic.ttf') format('truetype');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif BoldItalic';
+  src: url('/fonts/SourceSerif4-BoldItalic.ttf') format('truetype');
   fonst-style: normal;
   font-display: swap;
 }
