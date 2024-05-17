@@ -1,8 +1,3 @@
-- Make components for blogposts
-  - Footnotes
-  - img + description (CTF)
-- Socials
-- Custom 404
-- tab icon + title
-- Meta info & SEO
-- Deploy things
+- comparatitiitve table
+- translation table
+- example table

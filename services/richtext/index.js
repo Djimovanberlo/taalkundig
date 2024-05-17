@@ -4,6 +4,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import ImageComponent from '@/fragments/image'
 import { H1, H2, H3, H4, Li, P } from '@/fragments/typography'
 import { LinkButton } from '@/fragments/buttons'
+import { EMBEDDED_ENTRIES } from './constants'
+import ComparativeTable from '@/fragments/comparative-table'
 
 export function getRenderOptions(links) {
   const assetBlockMap = new Map()
@@ -25,8 +27,12 @@ export function getRenderOptions(links) {
       [BLOCKS.HEADING_2]: (node, children) => <H2>{children}</H2>,
       [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
       [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
-      [BLOCKS.PARAGRAPH]: (node, children) => <P className='p--mb'>{children}</P>,
+      [BLOCKS.PARAGRAPH]: (node, children) => <P>{children}</P>,
       [BLOCKS.LIST_ITEM]: (node, children) => <Li>{children}</Li>,
+      [BLOCKS.TABLE]: (node, children) => <table>{children}</table>,
+      [BLOCKS.TABLE_ROW]: (node, children) => <tr>{children}</tr>,
+      [BLOCKS.TABLE_CELL]: (node, children) => <td>{children}</td>,
+      [BLOCKS.TABLE_HEADER_CELL]: (node, children) => <th>{children}</th>,
       [INLINES.HYPERLINK]: (node, children) => (
         <LinkButton className='richtextLink' href={node.data.uri ?? ''} external='true'>
           {children}
@@ -36,13 +42,14 @@ export function getRenderOptions(links) {
         const asset = assetBlockMap.get(node.data.target.sys.id)
         return <ImageComponent className='richtextImage' src={asset.url} />
       },
-      [BLOCKS.TABLE]: (node, children) => (
-        <table>
-          <tbody>{children}</tbody>
-        </table>
-      ),
-      [BLOCKS.TABLE_ROW]: (node, children) => <tr>{children}</tr>,
-      [BLOCKS.TABLE_CELL]: (node, children) => <td>{children}</td>,
+      [BLOCKS.EMBEDDED_ENTRY]: node => {
+        const entry = entryBlockMap.get(node.data.target.sys.id)
+
+        if (entry.__typename === EMBEDDED_ENTRIES.COMPARATIVE_TABLE) {
+          return <ComparativeTable table={entry.table.json} />
+        }
+        return <></>
+      },
     },
   }
 }

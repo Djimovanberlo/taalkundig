@@ -11,7 +11,6 @@ const getData = async query => {
   } catch (err) {
     error = err
   }
-  // console.log('DATA', data, 'ERROR', error)
 
   return { data, error }
 }

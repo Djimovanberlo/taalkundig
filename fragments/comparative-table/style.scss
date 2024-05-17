@@ -1,0 +1,24 @@
+.comparativeTable {
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 9px;
+
+  @include screen-md {
+    font-size: 13px;
+  }
+
+  & tr:first-child {
+    font-family: 'Source Sans', sans-serif;
+    text-transform: uppercase;
+  }
+
+  & tr:not(:first-child) {
+    font-family: 'Source Serif', serif !important;
+  }
+
+  & th,
+  td {
+    padding: 10px;
+  }
+}
