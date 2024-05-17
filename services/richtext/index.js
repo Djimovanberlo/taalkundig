@@ -36,6 +36,13 @@ export function getRenderOptions(links) {
         const asset = assetBlockMap.get(node.data.target.sys.id)
         return <ImageComponent className='richtextImage' src={asset.url} />
       },
+      [BLOCKS.TABLE]: (node, children) => (
+        <table>
+          <tbody>{children}</tbody>
+        </table>
+      ),
+      [BLOCKS.TABLE_ROW]: (node, children) => <tr>{children}</tr>,
+      [BLOCKS.TABLE_CELL]: (node, children) => <td>{children}</td>,
     },
   }
 }
