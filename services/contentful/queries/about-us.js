@@ -24,6 +24,21 @@ export const aboutPageQuery = gql`
                 id
               }
               __typename
+              ... on TranslationTable {
+                table {
+                  json
+                }
+              }
+              ... on ExampleTable {
+                table {
+                  json
+                }
+              }
+              ... on ComparativeTable {
+                table {
+                  json
+                }
+              }
             }
           }
         }

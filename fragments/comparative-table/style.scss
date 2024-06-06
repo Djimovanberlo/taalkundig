@@ -1,0 +1,28 @@
+.comparativeTable {
+  width: fit-content;
+  margin-inline: auto;
+  border-collapse: collapse;
+  text-align: center;
+
+  & table {
+    border-collapse: collapse;
+  }
+
+  & th p {
+    line-height: 1.2;
+    font-size: 9px;
+    font-family: 'Source Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+
+    @include screen-md {
+      font-size: 11px;
+    }
+  }
+
+  & tr:first-child {
+    border-bottom: 2px solid black;
+  }
+
+  @include table-style(true);
+}
