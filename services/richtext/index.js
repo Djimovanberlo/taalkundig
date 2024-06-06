@@ -6,6 +6,7 @@ import { H1, H2, H3, H4, Li, P } from '@/fragments/typography'
 import { LinkButton } from '@/fragments/buttons'
 import { EMBEDDED_ENTRIES } from './constants'
 import ComparativeTable from '@/fragments/comparative-table'
+import TranslationTable from '@/fragments/translation-table'
 
 export function getRenderOptions(links) {
   const assetBlockMap = new Map()
@@ -29,7 +30,11 @@ export function getRenderOptions(links) {
       [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
       [BLOCKS.PARAGRAPH]: (node, children) => <P>{children}</P>,
       [BLOCKS.LIST_ITEM]: (node, children) => <Li>{children}</Li>,
-      [BLOCKS.TABLE]: (node, children) => <table>{children}</table>,
+      [BLOCKS.TABLE]: (node, children) => (
+        <table>
+          <tbody>{children}</tbody>
+        </table>
+      ),
       [BLOCKS.TABLE_ROW]: (node, children) => <tr>{children}</tr>,
       [BLOCKS.TABLE_CELL]: (node, children) => <td>{children}</td>,
       [BLOCKS.TABLE_HEADER_CELL]: (node, children) => <th>{children}</th>,
@@ -46,7 +51,12 @@ export function getRenderOptions(links) {
         const entry = entryBlockMap.get(node.data.target.sys.id)
 
         if (entry.__typename === EMBEDDED_ENTRIES.COMPARATIVE_TABLE) {
-          return <ComparativeTable table={entry.table.json} />
+          return <ComparativeTable table={entry.table} />
+        }
+
+        if (entry.__typename === EMBEDDED_ENTRIES.TRANSLATION_TABLE) {
+          console.log('Entry', entry.table)
+          return <TranslationTable table={entry.table} />
         }
         return <></>
       },

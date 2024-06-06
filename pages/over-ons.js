@@ -15,6 +15,7 @@ const OverOns = ({ data }) => {
 
 export async function getStaticProps() {
   const { data, error } = await getAbousUsPageData()
+
   return {
     props: {
       data,
