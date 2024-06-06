@@ -7,6 +7,7 @@ import { LinkButton } from '@/fragments/buttons'
 import { EMBEDDED_ENTRIES } from './constants'
 import ComparativeTable from '@/fragments/comparative-table'
 import TranslationTable from '@/fragments/translation-table'
+import ExampleTable from '@/fragments/example-table'
 
 export function getRenderOptions(links) {
   const assetBlockMap = new Map()
@@ -55,9 +56,13 @@ export function getRenderOptions(links) {
         }
 
         if (entry.__typename === EMBEDDED_ENTRIES.TRANSLATION_TABLE) {
-          console.log('Entry', entry.table)
           return <TranslationTable table={entry.table} />
         }
+
+        if (entry.__typename === EMBEDDED_ENTRIES.EXAMPLE_TABLE) {
+          return <ExampleTable table={entry.table} />
+        }
+
         return <></>
       },
     },
