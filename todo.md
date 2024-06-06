@@ -1,3 +1,0 @@
-- comparatitiitve table
-- translation table
-- example table
