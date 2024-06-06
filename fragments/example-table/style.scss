@@ -1,9 +1,9 @@
 .exampleTable {
   & tr:first-child {
-    th:first-child {
+    td:first-child {
       padding-inline: 10px;
     }
   }
-  
+
   @include table-style(false);
 }
