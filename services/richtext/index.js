@@ -1,4 +1,4 @@
-import { BLOCKS, INLINES } from '@contentful/rich-text-types'
+import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import ImageComponent from '@/fragments/image'
@@ -8,6 +8,7 @@ import { EMBEDDED_ENTRIES } from './constants'
 import ComparativeTable from '@/fragments/comparative-table'
 import TranslationTable from '@/fragments/translation-table'
 import ExampleTable from '@/fragments/example-table'
+import EmbeddedImage from '@/fragments/embedded-image'
 
 export function getRenderOptions(links) {
   const assetBlockMap = new Map()
@@ -61,6 +62,10 @@ export function getRenderOptions(links) {
 
         if (entry.__typename === EMBEDDED_ENTRIES.EXAMPLE_TABLE) {
           return <ExampleTable table={entry.table} />
+        }
+
+        if (entry.__typename === EMBEDDED_ENTRIES.EMBEDDED_IMAGE) {
+          return <EmbeddedImage image={entry.image} caption={entry.caption} />
         }
 
         return <></>

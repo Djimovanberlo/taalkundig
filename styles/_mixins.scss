@@ -46,7 +46,8 @@
 
 // Misc
 @mixin table-style($not-to-header: true) {
-  margin-block: 2rem;
+  overflow-x: auto;
+  padding-block: 2rem;
 
   @if $not-to-header {
     tr:not(:first-child) p {
@@ -70,7 +71,7 @@
 
   th,
   td {
-    padding-inline: 4px;
+    padding-inline: 5px;
   }
 
   & * {

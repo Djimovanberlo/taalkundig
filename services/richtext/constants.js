@@ -2,6 +2,7 @@ export const EMBEDDED_ENTRIES = {
   COMPARATIVE_TABLE: 'ComparativeTable',
   EXAMPLE_TABLE: 'ExampleTable',
   TRANSLATION_TABLE: 'TranslationTable',
+  EMBEDDED_IMAGE: 'EmbeddedImage',
 }
 
 export const NODE_TYPES = {

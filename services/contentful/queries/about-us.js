@@ -39,6 +39,14 @@ export const aboutPageQuery = gql`
                   json
                 }
               }
+              ... on EmbeddedImage {
+              	caption {
+                  json
+                }
+                image {
+                  url
+                }
+              }
             }
           }
         }

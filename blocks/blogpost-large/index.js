@@ -14,7 +14,7 @@ const BlogPostLarge = ({ image, title, introduction, content, publishedAt }) => 
       <Card>
         <H1 className='blogpostLarge__title'>{title}</H1>
         <P className='blogpostLarge__intro'>{introduction}</P>
-        <RichTextRenderer richText={content} />
+        <RichTextRenderer className='blogpostLarge__content' richText={content} />
       </Card>
       <PostFooter publishedAt={publishedAt} />
     </Block>
