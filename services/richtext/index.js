@@ -50,8 +50,10 @@ export function getRenderOptions(links) {
       },
       [BLOCKS.EMBEDDED_ENTRY]: node => {
         const entry = entryBlockMap.get(node.data.target.sys.id)
+        console.log("E", entry)
 
         if (entry.__typename === EMBEDDED_ENTRIES.COMPARATIVE_TABLE) {
+          console.log("T", entry)
           return <ComparativeTable table={entry.table} />
         }
 

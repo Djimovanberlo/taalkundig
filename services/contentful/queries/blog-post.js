@@ -34,6 +34,21 @@ export const blogPostDetailQuery = slug => gql`
                   id
                 }
                 __typename
+                ... on TranslationTable {
+                  table {
+                    json
+                  }
+                }
+                ... on ExampleTable {
+                  table {
+                    json
+                  }
+                }
+                ... on ComparativeTable {
+                  table {
+                    json
+                  }
+                }
               }
             }
           }

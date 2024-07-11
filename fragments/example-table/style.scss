@@ -1,8 +1,30 @@
 .exampleTable {
+  margin-inline: auto;
+  width: fit-content;
+
   & tr:first-child {
     td:first-child {
       padding-inline: 10px;
     }
+  }
+  
+  & tr:last-child { // height matches line-height of contents +1px top + bottom for table properties
+    height: 18px;
+
+    @include screen-md {
+      height: 26px;
+    }
+  
+  & td:nth-child(2) {
+    position: relative;
+
+    & > p {
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+    }}
   }
 
   @include table-style(false);
