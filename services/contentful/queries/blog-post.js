@@ -49,6 +49,14 @@ export const blogPostDetailQuery = slug => gql`
                     json
                   }
                 }
+                ... on EmbeddedImage {
+              	  caption {
+                    json
+                  }
+                  image {
+                    url
+                  }
+                }
               }
             }
           }
