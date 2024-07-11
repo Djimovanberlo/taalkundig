@@ -8,6 +8,7 @@ import { EMBEDDED_ENTRIES } from './constants'
 import ComparativeTable from '@/fragments/comparative-table'
 import TranslationTable from '@/fragments/translation-table'
 import ExampleTable from '@/fragments/example-table'
+import EmbeddedImage from '@/fragments/embedded-image'
 
 export function getRenderOptions(links) {
   const assetBlockMap = new Map()
@@ -50,10 +51,8 @@ export function getRenderOptions(links) {
       },
       [BLOCKS.EMBEDDED_ENTRY]: node => {
         const entry = entryBlockMap.get(node.data.target.sys.id)
-        console.log("E", entry)
 
         if (entry.__typename === EMBEDDED_ENTRIES.COMPARATIVE_TABLE) {
-          console.log("T", entry)
           return <ComparativeTable table={entry.table} />
         }
 
@@ -63,6 +62,10 @@ export function getRenderOptions(links) {
 
         if (entry.__typename === EMBEDDED_ENTRIES.EXAMPLE_TABLE) {
           return <ExampleTable table={entry.table} />
+        }
+
+        if (entry.__typename === EMBEDDED_ENTRIES.EMBEDDED_IMAGE) {
+          return <EmbeddedImage image={entry.image} caption={entry.caption} />
         }
 
         return <></>
