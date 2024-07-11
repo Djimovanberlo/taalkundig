@@ -1,6 +1,7 @@
 .exampleTable {
   margin-inline: auto;
-  width: fit-content;
+  overflow-x: scroll;
+  max-width: fit-content;
 
   & tr:first-child {
     td:first-child {
