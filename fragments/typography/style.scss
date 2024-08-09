@@ -11,34 +11,35 @@ h2,
 h3,
 h4,
 h6 {
-  font-family: 'Source Sans', sans-serif;
+  font-family: "Source Sans", sans-serif;
 
   & b {
-    font-family: 'Source Sans Bold', sans-serif;
+    font-family: "Source Sans Bold", sans-serif;
   }
 
   & i {
-    font-family: 'Source Sans Italic', sans-serif;
+    font-family: "Source Sans Italic", sans-serif;
   }
 
   & b i {
-    font-family: 'Source Sans BoldItalic', sans-serif;
+    font-family: "Source Sans BoldItalic", sans-serif;
   }
 }
 
-p, h1 {
-  font-family: 'Source Serif', serif;
+p,
+h1 {
+  font-family: "Source Serif", serif;
 
   & b {
-    font-family: 'Source Serif Bold', serif;
+    font-family: "Source Serif Bold", serif;
   }
 
   & i {
-    font-family: 'Source Serif Italic', serif;
+    font-family: "Source Serif Italic", serif;
   }
 
   & b i {
-    font-family: 'Source Serif BoldItalic', serif;
+    font-family: "Source Serif BoldItalic", serif;
   }
 }
 
@@ -47,7 +48,7 @@ p, h1 {
 sub {
   all: unset;
   font-variant: small-caps;
-  font-family: 'Source Sans', sans-serif;
+  font-family: "Source Sans", sans-serif;
 }
 
 .h1 {
@@ -84,7 +85,6 @@ sub {
     line-height: 24px;
   }
 }
-
 
 .li > .p {
   margin-bottom: auto;
