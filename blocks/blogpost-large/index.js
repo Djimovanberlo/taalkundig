@@ -4,12 +4,14 @@ import ImageComponent from "@/fragments/image";
 import { H1, P } from "@/fragments/typography";
 import PostFooter from "@/fragments/post-footer";
 import RichTextRenderer from "@/services/richtext";
+import SidenotesWrapper from "@/fragments/sidenotes-wrapper";
 
 const BlogPostLarge = ({
   image,
   title,
   introduction,
   content,
+  sidenotesCollection,
   publishedAt,
 }) => {
   return (
@@ -22,6 +24,7 @@ const BlogPostLarge = ({
           className="blogpostLarge__content"
           richText={content}
         />
+        <SidenotesWrapper sidenotesCollection={sidenotesCollection} />
       </Card>
       <PostFooter publishedAt={publishedAt} />
     </Block>

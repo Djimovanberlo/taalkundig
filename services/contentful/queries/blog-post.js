@@ -1,6 +1,6 @@
-import { gql } from 'graphql-request'
+import { gql } from "graphql-request";
 
-export const blogPostDetailQuery = slug => gql`
+export const blogPostDetailQuery = (slug) => gql`
   {
     blogPostCollection(where: {slug: "${slug}"}, limit: 1) {
       items {
@@ -61,13 +61,21 @@ export const blogPostDetailQuery = slug => gql`
             }
           }
         }
+        sidenotesCollection {
+          items {
+            pxTop
+            content {
+              json
+            }
+          }
+        }
         sys {
           publishedAt
         }
       }
     }
   }
-`
+`;
 
 export const blogPostCollectionSlugs = gql`
   {
@@ -77,4 +85,4 @@ export const blogPostCollectionSlugs = gql`
       }
     }
   }
-`
+`;
