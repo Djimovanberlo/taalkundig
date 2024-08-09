@@ -1,28 +1,30 @@
 @charset 'utf-8';
-@use 'sass:math';
+@use "sass:math";
 
-@import './variables';
-@import './mixins';
+@import "./variables";
+@import "./mixins";
 
 /* Layout style sheets */
-@import './../layout/block/style.scss';
-@import './../layout/main/style.scss';
-@import './../layout/template/style.scss';
-@import './../layout/header/style.scss';
-@import './../layout/footer/style.scss';
-@import './../layout/container/style.scss';
+@import "./../layout/block/style.scss";
+@import "./../layout/main/style.scss";
+@import "./../layout/template/style.scss";
+@import "./../layout/header/style.scss";
+@import "./../layout/footer/style.scss";
+@import "./../layout/container/style.scss";
 
 /* Blocks style sheets */
-@import './../blocks/blogpost-small/style.scss';
-@import './../blocks/blogpost-large/style.scss';
+@import "./../blocks/blogpost-small/style.scss";
+@import "./../blocks/blogpost-large/style.scss";
 
 /* Fragments style sheets */
-@import './../fragments/typography/style.scss';
-@import './../fragments/comparative-table/style.scss';
-@import './../fragments/translation-table/style.scss';
-@import './../fragments/example-table/style.scss';
-@import './../fragments/embedded-image/style.scss';
-@import './../fragments/image/style.scss';
-@import './../fragments/card/style.scss';
-@import './../fragments/buttons/style.scss';
-@import './../fragments/post-footer/style.scss';
+@import "./../fragments/typography/style.scss";
+@import "./../fragments/comparative-table/style.scss";
+@import "./../fragments/translation-table/style.scss";
+@import "./../fragments/example-table/style.scss";
+@import "./../fragments/embedded-image/style.scss";
+@import "./../fragments/image/style.scss";
+@import "./../fragments/card/style.scss";
+@import "./../fragments/sidenote/style.scss";
+@import "./../fragments/sidenotes-wrapper/style.scss";
+@import "./../fragments/buttons/style.scss";
+@import "./../fragments/post-footer/style.scss";
