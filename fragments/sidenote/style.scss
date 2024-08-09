@@ -1,2 +1,9 @@
 .sidenote {
+  @include screen-xl {
+    position: absolute;
+    right: 0;
+    top: var(--px-top);
+    background-color: $white;
+    padding: $space-xs;
+  }
 }

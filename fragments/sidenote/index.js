@@ -3,8 +3,8 @@ import RichTextRenderer from "@/services/richtext";
 const SideNote = ({ content, pxTop }) => (
   <RichTextRenderer
     richText={content}
-    className="sideNote"
-    style={{ "--px-top": pxTop }}
+    className="sidenote"
+    style={{ "--px-top": pxTop + "px" }}
   />
 );
 
