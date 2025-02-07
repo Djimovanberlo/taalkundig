@@ -27,7 +27,7 @@
     margin-bottom: $space-xs;
 
     @include screen-md {
-      margin-bottom: $space-sm;
+      margin-bottom: 1rem;
     }
   }
 

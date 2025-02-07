@@ -9,17 +9,23 @@ import ComparativeTable from "@/fragments/comparative-table";
 import TranslationTable from "@/fragments/translation-table";
 import ExampleTable from "@/fragments/example-table";
 import EmbeddedImage from "@/fragments/embedded-image";
+import InlineAudio from "@/fragments/inline-audio";
 
 export function getRenderOptions(links) {
   const assetBlockMap = new Map();
   const entryBlockMap = new Map();
+  const entryInlineMap = new Map();
 
   if (links) {
+    console.log("links", links);
     for (const asset of links.assets.block) {
       assetBlockMap.set(asset.sys.id, asset);
     }
     for (const entry of links.entries.block) {
       entryBlockMap.set(entry.sys.id, entry);
+    }
+    for (const inline of links.entries.inline) {
+      entryInlineMap.set(inline.sys.id, inline);
     }
   }
 
@@ -51,10 +57,14 @@ export function getRenderOptions(links) {
           {children}
         </LinkButton>
       ),
+      [INLINES.EMBEDDED_ENTRY]: (node) => {
+        const entry = entryInlineMap.get(node.data.target.sys.id);
+        console.log("E", entry);
+        return <InlineAudio url={entry.audioAsset.url} />;
+      },
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
         const asset = assetBlockMap.get(node.data.target.sys.id);
-        console.log("A", asset);
-        // return <ImageComponent className="richtextImage" src={asset.url} />;
+        return <ImageComponent className="richtextImage" src={asset.url} />;
       },
       [BLOCKS.EMBEDDED_ENTRY]: (node) => {
         const entry = entryBlockMap.get(node.data.target.sys.id);
@@ -75,7 +85,6 @@ export function getRenderOptions(links) {
         }
 
         if (entry.__typename === EMBEDDED_ENTRIES.EMBEDDED_IMAGE) {
-          console.log("E", entry.image);
           return <EmbeddedImage image={entry.image} caption={entry.caption} />;
         }
 
