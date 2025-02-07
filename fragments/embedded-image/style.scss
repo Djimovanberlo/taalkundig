@@ -1,5 +1,7 @@
 .embeddedImage {
-    &__richtext {
-        text-align: center;
-    }
+  padding-block: 2rem;
+
+  &__richtext {
+    text-align: center;
+  }
 }

@@ -55,6 +55,8 @@ export const blogPostDetailQuery = (slug) => gql`
                   }
                   image {
                     url
+                    width
+                    height
                   }
                 }
               }
