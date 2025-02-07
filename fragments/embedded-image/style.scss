@@ -1,5 +1,9 @@
 .embeddedImage {
-  padding-block: 2rem;
+  padding-block: 1rem;
+
+  @include screen-md {
+    padding-block: 1.5rem;
+  }
 
   &__richtext {
     text-align: center;

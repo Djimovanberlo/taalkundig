@@ -17,10 +17,10 @@
 
   &__title,
   &__intro {
-    margin-bottom: $space-sm;
+    margin-bottom: $space-xs;
 
     @include screen-md {
-      margin-bottom: $space-md;
+      margin-bottom: $space-sm;
     }
   }
 

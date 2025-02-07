@@ -2,7 +2,7 @@ import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import ImageComponent from "@/fragments/image";
-import { H1, H2, H3, H4, Li, P } from "@/fragments/typography";
+import { H1, H2, H3, H4, H5, H6, Li, P } from "@/fragments/typography";
 import { LinkButton } from "@/fragments/buttons";
 import { EMBEDDED_ENTRIES } from "./constants";
 import ComparativeTable from "@/fragments/comparative-table";
@@ -30,7 +30,11 @@ export function getRenderOptions(links) {
       [BLOCKS.HEADING_2]: (node, children) => <H2>{children}</H2>,
       [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
       [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
-      [BLOCKS.PARAGRAPH]: (node, children) => <P>{children}</P>,
+      [BLOCKS.PARAGRAPH]: (node, children) => (
+        <P withMarginBottom>{children}</P>
+      ),
+      [BLOCKS.HEADING_5]: (node, children) => <H5>{children}</H5>,
+      [BLOCKS.HEADING_6]: (node, children) => <H6>{children}</H6>,
       [BLOCKS.LIST_ITEM]: (node, children) => <Li>{children}</Li>,
       [BLOCKS.TABLE]: (node, children) => (
         <table>
@@ -80,6 +84,7 @@ export function getRenderOptions(links) {
 
 export default function RichTextRenderer({ richText, className = "", style }) {
   if (!richText || !richText.json) return <></>;
+
   return (
     <div style={style} className={className}>
       {documentToReactComponents(
