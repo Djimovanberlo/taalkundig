@@ -53,7 +53,8 @@ export function getRenderOptions(links) {
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
         const asset = assetBlockMap.get(node.data.target.sys.id);
-        return <ImageComponent className="richtextImage" src={asset.url} />;
+        console.log("A", asset);
+        // return <ImageComponent className="richtextImage" src={asset.url} />;
       },
       [BLOCKS.EMBEDDED_ENTRY]: (node) => {
         const entry = entryBlockMap.get(node.data.target.sys.id);

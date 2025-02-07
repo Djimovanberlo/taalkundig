@@ -69,6 +69,17 @@ export const blogPostDetailQuery = (slug) => gql`
                   }
                 }
               }
+              inline {
+                sys {
+                  id
+                }
+                __typename
+                ... on InlineAudio {
+                  audioAsset {
+                    url
+                  }
+                }
+              }
             }
           }
         }
