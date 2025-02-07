@@ -8,18 +8,13 @@ const ImageComponent = ({
   objectPosition = "top",
   width,
   height,
-  fill = false,
+  withAspectRatio = false,
 }) => {
+  const aspectRatio = withAspectRatio ? width / height : undefined;
+
   return (
-    <div className={`${className} imageWrapper`}>
-      <Image
-        src={src}
-        fill
-        alt={alt}
-        // width={width}
-        // height={height}
-        style={{ objectFit, objectPosition }}
-      />
+    <div style={{ aspectRatio }} className={`${className} imageWrapper`}>
+      <Image src={src} fill alt={alt} style={{ objectFit, objectPosition }} />
     </div>
   );
 };
