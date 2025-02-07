@@ -59,7 +59,6 @@ export function getRenderOptions(links) {
       ),
       [INLINES.EMBEDDED_ENTRY]: (node) => {
         const entry = entryInlineMap.get(node.data.target.sys.id);
-        console.log("E", entry);
         return <InlineAudio url={entry.audioAsset.url} />;
       },
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
