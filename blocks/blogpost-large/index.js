@@ -19,6 +19,7 @@ const BlogPostLarge = ({
       <ImageComponent className="blogpostLarge__img" src={image?.url} />
       <Card>
         <H1 className="blogpostLarge__title">{title}</H1>
+        <hr />
         <P className="blogpostLarge__intro">{introduction}</P>
         <RichTextRenderer
           className="blogpostLarge__content"

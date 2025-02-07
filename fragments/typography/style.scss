@@ -10,7 +10,14 @@ p {
 }
 
 h2,
-h3,
+h3 {
+  font-family: "Source Sans Bold", sans-serif;
+
+  & i {
+    font-family: "Source Sans Italic", sans-serif;
+  }
+}
+
 h4,
 h5,
 h6 {
@@ -99,4 +106,9 @@ sub {
 
 .li > .p {
   margin-bottom: auto;
+}
+
+u {
+  text-decoration: none;
+  font-variant: small-caps;
 }

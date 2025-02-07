@@ -15,6 +15,7 @@ const BlogPostSmall = ({ image, title, introduction, slug, publishedAt }) => {
       </Link>
       <Card>
         <H1 className="blogpostSmall__title">{title}</H1>
+        <hr />
         <P className="blogpostSmall__intro">{introduction}</P>
         <LinkButton href={slug}>
           <P>Verder lezen →</P>

@@ -1,6 +1,10 @@
 .embeddedImage {
   padding-block: 1rem;
 
+  & .imageWrapper {
+    margin-bottom: 0.75rem;
+  }
+
   @include screen-md {
     padding-block: 1.5rem;
   }
