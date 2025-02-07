@@ -12,22 +12,17 @@ import EmbeddedImage from "@/fragments/embedded-image";
 import InlineAudio from "@/fragments/inline-audio";
 
 export function getRenderOptions(links) {
-  const assetBlockMap = new Map();
-  const entryBlockMap = new Map();
-  const entryInlineMap = new Map();
+  const assetBlockMap = new Map(
+    links?.assets?.block?.map((asset) => [asset.sys.id, asset]) ?? []
+  );
 
-  if (links) {
-    console.log("links", links);
-    for (const asset of links.assets.block) {
-      assetBlockMap.set(asset.sys.id, asset);
-    }
-    for (const entry of links.entries.block) {
-      entryBlockMap.set(entry.sys.id, entry);
-    }
-    for (const inline of links.entries.inline) {
-      entryInlineMap.set(inline.sys.id, inline);
-    }
-  }
+  const entryBlockMap = new Map(
+    links?.entries?.block?.map((entry) => [entry.sys.id, entry]) ?? []
+  );
+
+  const entryInlineMap = new Map(
+    links?.entries?.inline?.map((inline) => [inline.sys.id, inline]) ?? []
+  );
 
   return {
     renderText: (text) => text.replace("!", "?"),

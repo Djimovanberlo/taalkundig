@@ -4,7 +4,7 @@ const ComparativeTable = ({ table, caption }) => {
   return (
     <section className="comparativeTable">
       <RichTextRenderer className="comparativeTable__table" richText={table} />
-      <RichTextRenderer richText={caption} />
+      {caption && <RichTextRenderer richText={caption} />}
     </section>
   );
 };

@@ -1,9 +1,9 @@
 import RichTextRenderer from "@/services/richtext";
 
-const ExampleTable = ({ table }) => (
+const ExampleTable = ({ table, caption }) => (
   <section className="exampleTable">
     <RichTextRenderer richText={table} className="exampleTable__table" />
-    <RichTextRenderer richText={caption} />
+    {caption && <RichTextRenderer richText={caption} />}
   </section>
 );
 
