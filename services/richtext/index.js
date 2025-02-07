@@ -30,9 +30,7 @@ export function getRenderOptions(links) {
       [BLOCKS.HEADING_2]: (node, children) => <H2>{children}</H2>,
       [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
       [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
-      [BLOCKS.PARAGRAPH]: (node, children) => (
-        <P withMarginBottom>{children}</P>
-      ),
+      [BLOCKS.PARAGRAPH]: (node, children) => <P>{children}</P>,
       [BLOCKS.HEADING_5]: (node, children) => <H5>{children}</H5>,
       [BLOCKS.HEADING_6]: (node, children) => <H6>{children}</H6>,
       [BLOCKS.LIST_ITEM]: (node, children) => <Li>{children}</Li>,
@@ -59,17 +57,20 @@ export function getRenderOptions(links) {
       },
       [BLOCKS.EMBEDDED_ENTRY]: (node) => {
         const entry = entryBlockMap.get(node.data.target.sys.id);
-
         if (entry.__typename === EMBEDDED_ENTRIES.COMPARATIVE_TABLE) {
-          return <ComparativeTable table={entry.table} />;
+          return (
+            <ComparativeTable table={entry.table} caption={entry.caption} />
+          );
         }
 
         if (entry.__typename === EMBEDDED_ENTRIES.TRANSLATION_TABLE) {
-          return <TranslationTable table={entry.table} />;
+          return (
+            <TranslationTable table={entry.table} caption={entry.caption} />
+          );
         }
 
         if (entry.__typename === EMBEDDED_ENTRIES.EXAMPLE_TABLE) {
-          return <ExampleTable table={entry.table} />;
+          return <ExampleTable table={entry.table} caption={entry.caption} />;
         }
 
         if (entry.__typename === EMBEDDED_ENTRIES.EMBEDDED_IMAGE) {

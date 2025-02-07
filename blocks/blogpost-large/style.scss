@@ -26,6 +26,10 @@
 
   &__content {
     overflow: hidden;
+
+    & > .p {
+      margin-bottom: 1rem;
+    }
   }
 
   & > .card {

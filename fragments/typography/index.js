@@ -22,12 +22,8 @@ export const H6 = ({ className = "", children }) => {
   return <h6 className={`h6 ${className}`}>{children}</h6>;
 };
 
-export const P = ({ className = "", children, withMarginBottom = false }) => {
-  return (
-    <p className={`p ${className}`} data-margin-bottom={withMarginBottom}>
-      {children}
-    </p>
-  );
+export const P = ({ className = "", children }) => {
+  return <p className={`p ${className}`}>{children}</p>;
 };
 
 export const B = ({ className = "", children }) => {

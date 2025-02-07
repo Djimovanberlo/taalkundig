@@ -38,14 +38,23 @@ export const blogPostDetailQuery = (slug) => gql`
                   table {
                     json
                   }
+                  caption {
+                    json
+                  }
                 }
                 ... on ExampleTable {
                   table {
                     json
                   }
+                  caption {
+                    json
+                  }
                 }
                 ... on ComparativeTable {
                   table {
+                    json
+                  }
+                  caption {
                     json
                   }
                 }

@@ -52,7 +52,7 @@
   @if $not-to-header {
     tr:not(:first-child) p {
       font-size: 10px;
-      font-family: 'Source Serif', serif !important;
+      font-family: "Source Serif", serif !important;
 
       @include screen-md {
         font-size: 14px;
@@ -61,7 +61,7 @@
   } @else {
     tr p {
       font-size: 10px;
-      font-family: 'Source Serif', serif !important;
+      font-family: "Source Serif", serif !important;
 
       @include screen-md {
         font-size: 14px;

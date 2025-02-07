@@ -1,8 +1,11 @@
 .comparativeTable {
-  width: fit-content;
-  margin-inline: auto;
-  border-collapse: collapse;
-  text-align: center;
+  &__table {
+    width: fit-content;
+    margin-inline: auto;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
 
   & table {
     border-collapse: collapse;
@@ -11,7 +14,7 @@
   & th p {
     line-height: 1.2;
     font-size: 11px;
-    font-family: 'Source Sans', sans-serif;
+    font-family: "Source Sans", sans-serif;
     font-variant: small-caps;
     letter-spacing: 0.02em;
 
