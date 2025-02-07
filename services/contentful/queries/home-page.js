@@ -1,4 +1,4 @@
-import { gql } from 'graphql-request'
+import { gql } from "graphql-request";
 
 export const homePageQuery = gql`
   {
@@ -20,4 +20,4 @@ export const homePageQuery = gql`
       }
     }
   }
-`
+`;

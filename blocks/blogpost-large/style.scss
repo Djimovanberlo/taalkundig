@@ -3,6 +3,14 @@
   flex-direction: column;
   margin: $space-sm 0;
 
+  &__img {
+    height: 15rem;
+
+    @include screen-md {
+      height: 30rem;
+    }
+  }
+
   @include screen-md {
     margin: $space-xl 0;
   }
@@ -15,17 +23,20 @@
     }
   }
 
-  &__title,
   &__intro {
-    margin-bottom: $space-sm;
+    margin-bottom: $space-xs;
 
     @include screen-md {
-      margin-bottom: $space-md;
+      margin-bottom: 1rem;
     }
   }
 
   &__content {
     overflow: hidden;
+
+    & > .p {
+      margin-bottom: 1rem;
+    }
   }
 
   & > .card {

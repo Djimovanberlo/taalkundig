@@ -1,4 +1,4 @@
-import { gql } from 'graphql-request'
+import { gql } from "graphql-request";
 
 export const aboutPageQuery = gql`
   {
@@ -28,9 +28,15 @@ export const aboutPageQuery = gql`
                 table {
                   json
                 }
+                caption {
+                  json
+                }
               }
               ... on ExampleTable {
                 table {
+                  json
+                }
+                caption {
                   json
                 }
               }
@@ -38,13 +44,18 @@ export const aboutPageQuery = gql`
                 table {
                   json
                 }
+                caption {
+                  json
+                }
               }
               ... on EmbeddedImage {
-              	caption {
+                caption {
                   json
                 }
                 image {
                   url
+                  width
+                  height
                 }
               }
             }
@@ -53,4 +64,4 @@ export const aboutPageQuery = gql`
       }
     }
   }
-`
+`;

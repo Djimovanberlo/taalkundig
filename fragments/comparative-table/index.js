@@ -1,5 +1,12 @@
-import RichTextRenderer from '@/services/richtext'
+import RichTextRenderer from "@/services/richtext";
 
-const ComparativeTable = ({ table }) => <RichTextRenderer richText={table} className='comparativeTable' />
+const ComparativeTable = ({ table, caption }) => {
+  return (
+    <section className="comparativeTable">
+      <RichTextRenderer className="comparativeTable__table" richText={table} />
+      {caption && <RichTextRenderer richText={caption} />}
+    </section>
+  );
+};
 
-export default ComparativeTable
+export default ComparativeTable;

@@ -1,5 +1,10 @@
-import RichTextRenderer from '@/services/richtext'
+import RichTextRenderer from "@/services/richtext";
 
-const TranslationTable = ({ table }) => <RichTextRenderer richText={table} className='translationTable' />
+const TranslationTable = ({ table, caption }) => (
+  <section className="translationTable">
+    <RichTextRenderer richText={table} className="translationTable__table" />
+    {caption && <RichTextRenderer richText={caption} />}
+  </section>
+);
 
-export default TranslationTable
+export default TranslationTable;

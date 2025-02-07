@@ -3,6 +3,14 @@
   flex-direction: column;
   margin: $space-sm 0;
 
+  &__imageWrapper {
+    height: 15rem;
+
+    @include screen-md {
+      height: 30rem;
+    }
+  }
+
   @include screen-md {
     margin: $space-xl 0;
   }
@@ -20,7 +28,6 @@
     }
   }
 
-  &__title,
   &__intro {
     margin-bottom: $space-sm;
 

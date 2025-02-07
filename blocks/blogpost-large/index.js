@@ -16,9 +16,15 @@ const BlogPostLarge = ({
 }) => {
   return (
     <Block className="blogpostLarge">
-      <ImageComponent className="blogpostLarge__img" src={image?.url} />
+      <ImageComponent
+        className="blogpostLarge__img"
+        src={image?.url}
+        width={image.width}
+        height={image.height}
+      />
       <Card>
         <H1 className="blogpostLarge__title">{title}</H1>
+        <hr />
         <P className="blogpostLarge__intro">{introduction}</P>
         <RichTextRenderer
           className="blogpostLarge__content"

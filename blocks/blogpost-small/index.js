@@ -11,10 +11,16 @@ const BlogPostSmall = ({ image, title, introduction, slug, publishedAt }) => {
   return (
     <Block className="blogpostSmall">
       <Link href={slug}>
-        <ImageComponent className="blogpostSmall__img" src={image?.url} />
+        <ImageComponent
+          className="blogpostSmall__img"
+          src={image?.url}
+          width={image?.width}
+          height={image?.height}
+        />
       </Link>
       <Card>
         <H1 className="blogpostSmall__title">{title}</H1>
+        <hr />
         <P className="blogpostSmall__intro">{introduction}</P>
         <LinkButton href={slug}>
           <P>Verder lezen →</P>

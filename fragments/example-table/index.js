@@ -1,5 +1,10 @@
-import RichTextRenderer from '@/services/richtext'
+import RichTextRenderer from "@/services/richtext";
 
-const ExampleTable = ({ table }) => <RichTextRenderer richText={table} className='exampleTable' />
+const ExampleTable = ({ table, caption }) => (
+  <section className="exampleTable">
+    <RichTextRenderer richText={table} className="exampleTable__table" />
+    {caption && <RichTextRenderer richText={caption} />}
+  </section>
+);
 
-export default ExampleTable
+export default ExampleTable;

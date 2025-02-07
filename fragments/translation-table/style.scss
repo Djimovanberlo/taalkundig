@@ -1,4 +1,8 @@
 .translationTable {
+  &__table {
+    margin-bottom: 0.75rem;
+  }
+
   & tr:first-child {
     th:first-child {
       padding-inline: 10px;

@@ -14,6 +14,14 @@ export const H4 = ({ className = "", children }) => {
   return <h4 className={`h4 ${className}`}>{children}</h4>;
 };
 
+export const H5 = ({ className = "", children }) => {
+  return <h5 className={`h5 ${className}`}>{children}</h5>;
+};
+
+export const H6 = ({ className = "", children }) => {
+  return <h6 className={`h6 ${className}`}>{children}</h6>;
+};
+
 export const P = ({ className = "", children }) => {
   return <p className={`p ${className}`}>{children}</p>;
 };
