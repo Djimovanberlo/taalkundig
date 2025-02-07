@@ -3,6 +3,7 @@ import Main from "@/layout/main";
 import { getHomePageData } from "@/services/contentful/api";
 
 const Home = ({ data }) => {
+  console.log("D", data);
   return (
     <Main>
       {data.map(({ image, title, introduction, slug, sys }, index) => (

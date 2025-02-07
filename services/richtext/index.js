@@ -74,6 +74,7 @@ export function getRenderOptions(links) {
         }
 
         if (entry.__typename === EMBEDDED_ENTRIES.EMBEDDED_IMAGE) {
+          console.log("E", entry.image);
           return <EmbeddedImage image={entry.image} caption={entry.caption} />;
         }
 

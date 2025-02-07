@@ -54,6 +54,8 @@ export const aboutPageQuery = gql`
                 }
                 image {
                   url
+                  width
+                  height
                 }
               }
             }

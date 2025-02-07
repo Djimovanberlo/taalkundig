@@ -7,8 +7,8 @@ const EmbeddedImage = ({ image, caption }) => (
       className="richtextImage"
       objectFit="contain"
       src={image.url}
-      width={image.width}
-      height={image.height}
+      width={image.width ?? 11}
+      height={image.height ?? 11}
     />
     <RichTextRenderer richText={caption} className="embeddedImage__richtext" />
   </div>

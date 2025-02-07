@@ -1,12 +1,8 @@
 .imageWrapper {
   position: relative;
-}
 
-.richtextImage {
-  width: 100%;
-  height: 15rem;
-
-  @include screen-md {
-    height: 30rem;
+  img {
+    width: 100%;
+    height: 100%;
   }
 }

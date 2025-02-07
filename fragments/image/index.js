@@ -6,10 +6,20 @@ const ImageComponent = ({
   src = "",
   objectFit = "cover",
   objectPosition = "top",
+  width,
+  height,
+  fill = false,
 }) => {
   return (
     <div className={`${className} imageWrapper`}>
-      <Image src={src} fill alt={alt} style={{ objectFit, objectPosition }} />
+      <Image
+        src={src}
+        fill
+        alt={alt}
+        // width={width}
+        // height={height}
+        style={{ objectFit, objectPosition }}
+      />
     </div>
   );
 };
