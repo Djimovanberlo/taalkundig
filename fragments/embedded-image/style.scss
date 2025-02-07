@@ -7,5 +7,11 @@
 
   &__richtext {
     text-align: center;
+    height: 15rem;
+    width: 100%;
+
+    @include screen-md {
+      height: 30rem;
+    }
   }
 }
