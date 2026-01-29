@@ -1,0 +1,8 @@
+.main {
+  flex-grow: 1;
+  overflow-y: scroll;
+  background-color: $gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

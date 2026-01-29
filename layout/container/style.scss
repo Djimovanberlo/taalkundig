@@ -1,0 +1,4 @@
+.container {
+  width: min($max-width-large, $max-width-small);
+  margin-inline: auto;
+}

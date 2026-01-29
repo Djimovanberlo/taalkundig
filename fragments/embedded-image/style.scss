@@ -1,0 +1,21 @@
+.embeddedImage {
+  padding-block: 1rem;
+
+  @include screen-md {
+    padding-block: 1.5rem;
+  }
+
+  & .imageWrapper {
+    max-height: 17.5rem;
+    width: 100%;
+    margin-bottom: 0.75rem;
+
+    @include screen-md {
+      max-height: 25rem;
+    }
+  }
+
+  &__richtext {
+    text-align: center;
+  }
+}

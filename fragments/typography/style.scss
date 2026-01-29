@@ -1,34 +1,109 @@
-.h1,
-.h2,
-.h3,
-.h4,
-.p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: 'NotoSerif-Regular', serif;
+}
+
+h2,
+h3 {
+  font-family: "Source Sans Bold", sans-serif;
+
+  & i {
+    font-family: "Source Sans Italic", sans-serif;
+  }
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Source Sans", sans-serif;
+
+  & b {
+    font-family: "Source Sans Bold", sans-serif;
+  }
+
+  & i {
+    font-family: "Source Sans Italic", sans-serif;
+  }
+
+  & b i {
+    font-family: "Source Sans BoldItalic", sans-serif;
+  }
+}
+
+p,
+h1 {
+  font-family: "Source Serif", serif;
+
+  & b {
+    font-family: "Source Serif Bold", serif;
+  }
+
+  & i {
+    font-family: "Source Serif Italic", serif;
+  }
+
+  & b i {
+    font-family: "Source Serif BoldItalic", serif;
+  }
+}
+
+// sub is used to render small-caps according to design
+// contentful richtext does not support small-caps, so we are using sub as a woraround instead
+sub {
+  all: unset;
+  font-variant: small-caps;
+  font-family: "Source Sans", sans-serif;
 }
 
 .h1 {
-  font-size: 35px;
-  // mobile 26px
+  font-size: 26px;
+
+  @include screen-md {
+    font-size: 34px;
+  }
 }
 
 .h2 {
-  font-size: 24px;
-  // mobile 21px
+  font-size: 18px;
+  margin-bottom: 7px;
+
+  @include screen-md {
+    font-size: 21px;
+  }
 }
 
 .h3 {
-  font-size: 19px;
-  // mobile 15px
+  font-size: 17px;
 }
 
 .h4 {
   font-size: 14px;
-  // mobile 12px
+}
+
+.h5 {
+  font-size: 12px;
+}
+
+.h6 {
+  font-size: 10px;
 }
 
 .p {
-  font-size: 17px;
-  // mobile 15px
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.li > .p {
+  margin-bottom: auto;
+}
+
+u {
+  text-decoration: none;
+  font-variant: small-caps;
 }

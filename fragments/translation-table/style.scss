@@ -1,0 +1,25 @@
+.translationTable {
+  &__table {
+    margin-bottom: 0.75rem;
+  }
+
+  & tr:first-child {
+    th:first-child {
+      padding-inline: 10px;
+    }
+
+    th:nth-child(2) {
+      position: relative;
+
+      & > p {
+        position: absolute;
+        left: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @include table-style(false);
+}
